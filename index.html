@@ -8,6 +8,158 @@
     <script>
       eruda.init();
     </script> -->
+    <script src="./src/treatingData.js"> </script>
+    <script>
+      let json = {
+        "id": 466,
+        "schoolId": 1,
+        "studentName": "谢广坤",
+        "sex": 0,
+        "idCode": "330182199312173718",
+        "birthTime": "1997-02-19",
+        "politicalStatus": 1,
+        "nation": [],
+        "nativePlace": "浙江杭州",
+        "address": [],
+        "studentType": 1,
+        "classId": 3,
+        "enrolmentTime": "2016-09-16",
+        "graduationTime": null,
+        "studentNum": "198901",
+        "oneCardNum": "",
+        "realCardNum": null
+      }
+
+      let listjson = [
+      {
+        "id": 466,
+        "schoolId": 1,
+        "studentName": "谢广坤",
+        "sex": 0,
+        "idCode": "330182199312173718",
+        "birthTime": "1997-02-19",
+        "politicalStatus": 1,
+        "nation": [],
+        "nativePlace": "浙江杭州",
+        "address": [],
+        "studentType": 1,
+        "classId": 3,
+        "enrolmentTime": "2016-09-16",
+        "graduationTime": null,
+        "studentNum": "198901",
+        "oneCardNum": "",
+        "realCardNum": null
+      },
+      {
+        "id": 466,
+        "schoolId": 1,
+        "studentName": "谢广坤",
+        "sex": 0,
+        "idCode": "330182199312173718",
+        "birthTime": "1997-02-19",
+        "politicalStatus": 1,
+        "nation": [],
+        "nativePlace": "浙江杭州",
+        "address": [],
+        "studentType": 1,
+        "classId": 3,
+        "enrolmentTime": "2016-09-16",
+        "graduationTime": null,
+        "studentNum": "198901",
+        "oneCardNum": "",
+        "realCardNum": null
+      }
+      ]
+
+      let treeJson = [
+      {
+        "id": 0,
+        "name": "黑龙江大学",
+        "level": 0,
+        "parentId": null,
+        "majorId": null,
+        "key": "565473f4-1a81-4101-838e-da3922f2333f",
+        "subitems": [
+            {
+                "level": 1,
+                "name": "中俄学院",
+                "subitems": [
+                    {
+                        "majorId": 11,
+                        "level": 2,
+                        "name": "计算机1班",
+                        "subitems": [],
+                        "id": 6,
+                        "key": "7b0568bf-255b-4d3f-be67-c29e87ebec49",
+                        "parentId": 0
+                    }
+                ],
+                "id": 11,
+                "key": "e656feda-f858-42af-b6c0-f95c3bf6fd1c",
+                "parentId": 0
+            },
+            {
+                "level": 1,
+                "name": "经济与工商管理院",
+                "subitems": [
+                    {
+                        "majorId": 2,
+                        "level": 2,
+                        "name": null,
+                        "subitems": [],
+                        "id": 3,
+                        "key": "9932fdf2-fe05-4dde-9615-5ce56f7a6c18",
+                        "parentId": 0
+                    }
+                ],
+                "id": 2,
+                "key": null,
+                "parentId": 0
+            },
+            {
+                "level": 1,
+                "name": "软件学院",
+                "subitems": [
+                    {
+                        "majorId": 1,
+                        "level": 2,
+                        "name": null,
+                        "subitems": [],
+                        "id": 1,
+                        "key": "bf9ba181-4ac1-4405-9b66-66a5b14302af",
+                        "parentId": 0
+                    },
+                    {
+                        "majorId": 1,
+                        "level": 2,
+                        "name": "名称名称1名称名称1名称名称1名称名称1名称名称1名称名称1名称",
+                        "subitems": [
+                        {
+                            "majorId": 1,
+                            "level": 2,
+                            "name": "名称名称2名称名称3名称名称3名称名称3名称名称2名称名称2名称",
+                            "subitems": [],
+                            "id": 1,
+                            "key": null,
+                            "parentId": 0
+                        }
+                        ],
+                        "id": 2,
+                        "key": "1ecbb1e9-78bb-4df4-8ef9-e37728217a1e",
+                        "parentId": 0
+                    }
+                ],
+                "id": 1,
+                "key": "02288546-a231-40e1-9e26-fb0dd60d1d7f",
+                "parentId": 0
+            }
+        ]
+    }
+  ]
+      let aa = new tree(treeJson, ['subitems'], {childern: 'subitems'})
+      let bb = aa.treeTransForm()
+     console.log(bb)
+    </script>
   </head>
   <body>
     <div id="app"></div>
